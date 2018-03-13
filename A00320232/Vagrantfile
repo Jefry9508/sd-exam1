@@ -1,0 +1,57 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.ssh.insert_key = false
+    config.vm.define :Webserver1 do |server1|
+    server1.vm.box = "centos7_GA.box"
+    server1.vm.network :private_network, ip: "192.168.56.101"
+    server1.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "500","--cpus", "1", "--name", "Webserver1" ]
+    end
+    config.vm.provision "chef_solo" do |chef|
+       chef.cookbooks_path = "cookbooks"
+       chef.add_recipe "httpd"
+       chef.json = {
+		     "server" => "Server 1",
+	       "ip" => "192.168.33.11"
+		   }
+    end
+  end
+
+ config.vm.define :Webserver2 do |server2|
+    server2.vm.box = "centos7_GA.box"
+    server2.vm.network :private_network, ip: "192.168.56.102"
+    server2.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "500","--cpus", "1", "--name", "Webserver2" ]
+    end
+    config.vm.provision "chef_solo" do |chef|
+       chef.cookbooks_path = "cookbooks"
+       chef.add_recipe "httpd"
+       chef.json = {
+         "server" => "Server 2",
+         "ip" => "192.168.33.12"
+       }
+    end
+  end
+
+  config.vm.define :LoadBalancer do |balancer|
+    balancer.vm.box = "centos7_GA.box"
+    balancer.vm.network :private_network, ip: "192.168.56.103"
+    balancer.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "500","--cpus", "1", "--name", "LoadBalancer" ]
+    end
+    config.vm.provision "chef_solo" do |chef|
+       chef.cookbooks_path = "cookbooks"
+       chef.add_recipe "loadbalancer"
+       chef.json = {
+        "web_servers" => [
+          {"ip":"192.168.33.11"},
+          {"ip":"192.168.33.12"}
+         ]
+       }
+    end
+  end
+end
