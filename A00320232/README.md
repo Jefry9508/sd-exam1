@@ -28,10 +28,10 @@ el balanceo de carga y dos servidores web apache.
 
 ### Procedimiento
 
-**1) El parcial se desarrolló en los computadores de la sala Liason, los cuales ya tenian instalado Nginx. Por tal motivo
-su instalación se omitió.**
+**1)** El parcial se desarrolló en los computadores de la sala Liason, los cuales ya tenian instalado Nginx. Por tal motivo
+su instalación se omitió.
 
-![GitHub Logo2](Images/nginx version.png)
+![1](imagenes/nginxVersion.png)
 
 **2) Configuración del vagrantfile:**
 
@@ -39,7 +39,7 @@ Cuando se verificó que Nginex estuviera instalado en el equipo, se procedió a 
 
 ![4]()
 
-**3) Se crearon los cookbooks:**
+**3) Creación de cookbooks:**
 
 A continuación se muestra la estructura de la implementación de los cookbooks que nos servirán para el aprovisionamiento de cada
 una de las máquinas virtuales:
@@ -58,7 +58,7 @@ una de las máquinas virtuales:
 
 ![2]()
 
-**6) Conclusione:**
+**6) Conclusiones:**
 Dar solución a este parcial fue una gran experiencia ya que me permitió recordar unos conceptos que había obtenido en un curso
 anterior pero que no había podido poner en práctica. Además, fué importante ya que me permitió observar los procesos que pueden llevar a cabo los servidores para ofrecer un servicio confiable 
 
