@@ -61,10 +61,6 @@ Luego de tener el Vagrantfile y las recetas de configuración para las máquinas
 
 ![animacion1](imagenes/funcionamiento.gif)
 
-**5) Problemas encontrados:**
+### Problemas encontrados:
 
 Tuve un problema al momento de aprovisionar las máquinas ya que el computador no encontraba una ruta especificada en el archivo de configuración de nginx, el archivo al que hacía referencia no existía. Lo raro era que si reiniciaba la maquina en el primer ```vagrant up``` subia sin errores, pero si quería correr un provisioner ya no me dejaba. Este problema lo solucioné creando el archivo que pedía la receta.
-
-**6) Conclusiones:**
-Dar solución a este parcial fue una gran experiencia ya que me permitió recordar unos conceptos que había obtenido en un curso
-anterior pero que no había podido poner en práctica. Además, fué importante ya que me permitió observar los procesos que pueden llevar a cabo los servidores para ofrecer un servicio confiable, concurrente y escalable.
