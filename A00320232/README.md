@@ -15,16 +15,18 @@
 ### Objetivos
 * Realizar de forma autónoma el aprovisionamiento automático de infraestructura
 * Diagnosticar y ejecutar de forma autónoma las acciones necesarias para lograr infraestructuras estables
-* Realizar el aprovisionamiento automático de un balanceador de carga
+* Realizar el aprovisionamiento automático de un balanceador de carga.
 
 ### Herramientas utilizadas
-* Vagrant
-* Box del sistema operativo CentOS 7
-* Nginx
+* Vagrant.
+* Box del sistema operativo CentOS 7.
+* Nginx.
 
 ### Descripción
 En el desarrollo de la solución del parcial del balanceador se utilizó un servidor configurado con Nginx para realizar
-el balanceo de carga y dos servidores web apache.
+el balanceo de carga y dos servidores web apache. El diagrama de deployment se muestra a continuación.
+
+![0](imagenes/deployment.png)
 
 ### Procedimiento
 
