@@ -6,7 +6,7 @@
 
 **Docente:** Daniel Barragán  
 
-**Tema:** Automatización de infraestructura con Vagrant y Chef 
+**Tema:** Automatización de infraestructura con Vagrant y Chef
 
 **Estudiante:** Jefry Cardona Chilito
 
@@ -50,6 +50,8 @@ una de las máquinas virtuales:
 
 **4) Prueba de funcionamiento:**
 
+Luego de tener el Vagrantfile y las recetas de configuración para las máquinas a usar, nos situamos en la carpeta que contiene el Vagrantfile y se escribe el comando ```vagrant up``` para levantar las máquinas y aprovisionarlas con cada una de las recetas. Cuando fue necesario tambien se utilizó el comando ```vagrant provision``` cuando se modificaba algunas de las recetas y no tener que volver a subir todas las máquinas de nuevo cuyo proceso puede llegar a ser bastante demorado.
+
 ![animacion1](imagenes/funcionamiento.gif)
 
 **5) Problemas encontrados:**
@@ -58,5 +60,4 @@ Tuve un problema al momento de aprovisionar las máquinas ya que el computador n
 
 **6) Conclusiones:**
 Dar solución a este parcial fue una gran experiencia ya que me permitió recordar unos conceptos que había obtenido en un curso
-anterior pero que no había podido poner en práctica. Además, fué importante ya que me permitió observar los procesos que pueden llevar a cabo los servidores para ofrecer un servicio confiable 
-
+anterior pero que no había podido poner en práctica. Además, fué importante ya que me permitió observar los procesos que pueden llevar a cabo los servidores para ofrecer un servicio confiable, concurrente y escalable.
