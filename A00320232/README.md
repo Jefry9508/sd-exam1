@@ -35,6 +35,13 @@ su instalación se omitió.
 
 ![1](imagenes/nginxVersion.png)
 
+Entonces, se prosiguió a crear los archivos de configuración que luego serán utilizados por Vagrant para aprovisionarlos. Para esto se escribieron los siguientes comandos.
+
+```
+sudo vim /etc/yum.repos.d/nginx.repo
+sudo vim /etc/nginx/conf.d/load-balancer.conf
+```
+
 **2) Configuración del vagrantfile:**
 
 Cuando se verificó que Nginex estuviera instalado en el equipo, se procedió a la configuración del Vagrantfile con las máquinas virtuales que se utilizarán posteriormente para realizar las tareas del balanceo de carga.
