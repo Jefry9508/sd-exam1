@@ -4,11 +4,11 @@
 
 **Curso:** Sistemas Distribuidos  
 
-**Docente:** Daniel Barragán C.  
+**Docente:** Daniel Barragán  
 
 **Tema:** Automatización de infraestructura con Vagrant y Chef 
 
-**Estudiante:** Jefry Cardona Chilito.
+**Estudiante:** Jefry Cardona Chilito
 
 **Código:** A00320232
 
@@ -37,26 +37,22 @@ su instalación se omitió.
 
 Cuando se verificó que Nginex estuviera instalado en el equipo, se procedió a la configuración del Vagrantfile con las máquinas virtuales que se utilizarán posteriormente para realizar las tareas del balanceo de carga.
 
-![4]()
+![2](imagenes/Vagrantfile.png)
 
 **3) Creación de cookbooks:**
 
 A continuación se muestra la estructura de la implementación de los cookbooks que nos servirán para el aprovisionamiento de cada
 una de las máquinas virtuales:
 
-![3]()
+![3](imagenes/tree.png)
 
 **4) Prueba de funcionamiento:**
 
-
-
-![animacion3]()
+![animacion1](imagenes/funcionamiento.gif)
 
 **5) Problemas encontrados:**
 
-
-
-![2]()
+Tuve un problema al momento de aprovisionar las máquinas ya que el computador no encontraba una ruta especificada en el archivo de configuración de nginx, parecía que no existía. Luego de varios intentos sin obtener un resultado favorable reinicié el computador y al intentar aprovisionar de nuevo, encontró la ruta. Entonces tal vez el error pudo haber estado en que dejó información en caché que estaba haciendo conflicto a la hora de montar las máquinas.
 
 **6) Conclusiones:**
 Dar solución a este parcial fue una gran experiencia ya que me permitió recordar unos conceptos que había obtenido en un curso
